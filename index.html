@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Socket.io Name Prompt</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</head>
+<body>
+    <div class="login-page">
+        <form action="#" id="login-page-form">
+            <h1>Log in</h1>
+            <input autofocus required type="text" id="userName"  placeholder="Your Name? ">
+            <input type="submit" value="Submit" id="nameSubmitBtn">
+        </form>
+    </div>
+    <div class="chat-container">
+        <header>
+            <h1>Group Chat</h1>
+        </header>
+        <div class="container scrolling">
+                <!-- <div class="message left">
+                    <p class="inMessage-name" >Ganesh</p>
+                    <p class="inMessage-text" >Hello what are you doing?</p>
+                    <p class="time">12:40pm</p>
+                </div>
+                <div class="message right">
+                    <p class="inMessage-name" >Abhi</p>
+                    <p class="inMessage-text" >Hello , Nothing bro</p>
+                    <p class="time">11:50pm</p>
+                </div>
+                <div class="message left">
+                    <p class="inMessage-name" >Ganesh</p>
+                    <p class="inMessage-text" >so what about you</p>
+                    <p class="time">1:40pm</p>
+                </div>
+                <div class="message right">
+                    <p class="inMessage-name" >Abhi</p>
+                    <p class="inMessage-text" id="">there are no one bro</p>
+                    <p class="time">2:04am</p>
+                </div> -->
+               
+        </div>
+        <form action="#" id="form-container">
+            <input autofocus required type="text" name="userText" id="messageInput" placeholder="Message">
+            <div>
+                <input type="submit" style="display: none;">
+                <ion-icon name="send-outline" id="submitBtn"></ion-icon>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    //document.querySelector('.login-page').style.display = "none";
+    document.querySelector('.chat-container').style.display = "none";
+</script>
+
+</html>
+
