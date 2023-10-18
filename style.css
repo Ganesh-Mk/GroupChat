@@ -154,7 +154,7 @@ header h1{
 #messageInput {
     padding: .7rem 1.5rem;
     border-radius: 50rem;
-    width: 88%;
+    width: 86%;
     outline: none;
     border: none;
     font-size: 1rem;
@@ -166,7 +166,7 @@ header h1{
     color: #fff;
     border: none;
     border-radius: 50%;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     transition: background-color 0.3s;
     box-shadow: 0px 0px 11px -4px #023A5E;
