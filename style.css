@@ -12,6 +12,10 @@ body {
     place-items: center;
 }
 
+html, body{
+    overflow: hidden;
+}
+
 /* Login Page */
 .login-page {
     display: flex;
