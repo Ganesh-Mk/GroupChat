@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         appendFun(userName, 'You joined the chat', 'center');
 
         document.getElementById('messageInput').focus(); // auto focus to messageField
+        window.scrollTo(0, 0);
     })
 
     socket.on('user-joined', name => {
