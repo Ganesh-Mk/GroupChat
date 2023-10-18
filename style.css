@@ -11,7 +11,9 @@ body {
     display: grid;
     place-items: center;
 }
-
+html{
+  overflow: hidden;
+}
 html, body{
   overflow-x: hidden;
 }
