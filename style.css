@@ -272,6 +272,10 @@ header h1{
 }
 
 @media screen and (max-width: 600px) {
+    html{
+        overflow: hidden;
+        height: 100vh !important;
+    }
     .chat-container {
         width: 100%;
     }
