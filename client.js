@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         chatContainer.style.display = "block";
         appendFun(userName, 'You joined the chat', 'center');
 
-        document.getElementById('messageInput').focus(); // auto focus to messageField
+        //document.getElementById('messageInput').focus(); // auto focus to messageField
         window.scrollTo(0, 0);
     })
 
