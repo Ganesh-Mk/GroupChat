@@ -3,11 +3,14 @@
 <head>
     <title>Socket.io Name Prompt</title>
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="icon" href="https://icon-library.com/images/chat-icon-images/chat-icon-images-20.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Capriola&display=swap" rel="stylesheet">
     <script src="/socket.io/socket.io.js"></script>
+    <link rel="icon" href="https://icon-library.com/images/chat-icon-images/chat-icon-images-20.jpg">
     <script src="client.js"></script>
+    
 </head>
 <body>
     <div class="login-page">
@@ -17,32 +20,51 @@
             <input type="submit" value="Submit" id="nameSubmitBtn">
         </form>
     </div>
+    
     <div class="chat-container">
+        <div class="slide">
+            <h1 id="activeHeading">Active members</h1>
+            <div id="activeMembersList">
+                <ul id="memberContainer">
+                    <li class="activeMembers">Ganesh</li>
+                    <li class="activeMembers">Abhi</li>
+                    <li class="activeMembers">Pratham</li>
+                    <li class="activeMembers">Anwar</li>
+                </ul>
+              
+            </div>
+        </div>
         <header>
-            <h1>Group Chat</h1>
+            <img id="logo" src="https://icon-library.com/images/chat-icon-images/chat-icon-images-20.jpg" alt="logo">
+            <h1 id="headText">Group Chat</h1>
+            <ion-icon id="menuLogo" name="menu-outline"></ion-icon>
+            <ion-icon id="cancelLogo" name="close-outline"></ion-icon>
         </header>
         <div class="container scrolling">
-                <!-- <div class="message left">
-                    <p class="inMessage-name" >Ganesh</p>
-                    <p class="inMessage-text" >Hello what are you doing?</p>
-                    <p class="time">12:40pm</p>
-                </div>
-                <div class="message right">
-                    <p class="inMessage-name" >Abhi</p>
-                    <p class="inMessage-text" >Hello , Nothing bro</p>
-                    <p class="time">11:50pm</p>
-                </div>
-                <div class="message left">
-                    <p class="inMessage-name" >Ganesh</p>
-                    <p class="inMessage-text" >so what about you</p>
-                    <p class="time">1:40pm</p>
-                </div>
-                <div class="message right">
-                    <p class="inMessage-name" >Abhi</p>
-                    <p class="inMessage-text" id="">there are no one bro</p>
-                    <p class="time">2:04am</p>
-                </div> -->
-               
+            
+            
+            <!-- <div class="message left">
+                <p class="inMessage-name" >Ganesh</p>
+                <p class="inMessage-text" >Hello what are you doing?</p>
+                <p class="time">12:40pm</p>
+            </div>
+            <div class="message right">
+                <p class="inMessage-name" >Abhi</p>
+                <p class="inMessage-text" >Hello , Nothing bro</p>
+                <p class="time">11:50pm</p>
+            </div>
+            <div class="message left">
+                <p class="inMessage-name" >Ganesh</p>
+                <p class="inMessage-text" >so what about you</p>
+                <p class="time">1:40pm</p>
+            </div>
+            <div class="message right">
+                <p class="inMessage-name" >Abhi</p>
+                <p class="inMessage-text" id="">there are no one bro</p>
+                <p class="time">2:04am</p>
+            </div> -->
+            
+            
         </div>
         <form action="#" id="form-container">
             <input autofocus required type="text" name="userText" id="messageInput" placeholder="Message">
