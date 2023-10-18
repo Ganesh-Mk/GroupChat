@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById('submitBtn').addEventListener("click", (e)=> {
         e.preventDefault();
+        window.scrollTo(0, 0);
         const message = messageInput.value;
         appendFun(userName, message, 'right');
         socket.emit('send', message);
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+        window.scrollTo(0, 0);
         const message = messageInput.value;
         appendFun(userName, message, 'right');
         socket.emit('send', message);
@@ -55,10 +57,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     socket.on('receive', data => {
+        window.scrollTo(0, 0);
         appendFun(data.name, `${data.message}`, 'left');
     })
 
     socket.on('leave', name => {
+        window.scrollTo(0, 0);
         appendFun(name, `${name} left the chat`, 'center');
     })
 
@@ -68,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     function appendFun(name, message, position){
+        window.scrollTo(0, 0);
         if(position == "center"){
             const msg = document.createElement("p");    
             msg.innerHTML = message;
