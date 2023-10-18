@@ -36,12 +36,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     document.getElementById('submitBtn').addEventListener("click", (e)=> {
-        e.preventDefault();
-        window.scrollTo(0, 0);
-        const message = messageInput.value;
-        appendFun(userName, message, 'right');
-        socket.emit('send', message);
-        messageInput.value = "";
+        if(messageInput.value == ""){
+            messageInput.style.boxShadow = "red 0px 0px 7px -2px";
+            setTimeout(() => {
+                messageInput.style.boxShadow = "0px 0px 7px -4px black";
+            }, 500);
+        }else{
+            e.preventDefault();
+            window.scrollTo(0, 0);
+            const message = messageInput.value;
+            appendFun(userName, message, 'right');
+            socket.emit('send', message);
+            messageInput.value = "";
+        }
+            
     });
 
     form.addEventListener('submit', (e) => {
